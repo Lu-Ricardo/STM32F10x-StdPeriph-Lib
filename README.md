@@ -35,4 +35,4 @@ add_definitions(
     -DHSE_VALUE=8000000
 )
 ```
-模板工程参考，[点此跳转](/gitea/Liyuu_SK/STM32F10x-Template-Project)
+模板工程参考，[点此跳转](https://10.2.24.6/gitea/Liyuu_SK/STM32F10x-Template-Project)
