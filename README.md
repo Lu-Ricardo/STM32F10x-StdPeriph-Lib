@@ -2,7 +2,7 @@
 Version 3.6.0
 
 # 使用方法
-1. 添加环境变量``STM32StdLib_ROOT``指向此文件夹
+1. 将此项目下载之后，添加环境变量``STM32StdLib_ROOT``指向此文件夹
 2. 在自己工程项目的CMakeLists.txt中添加库
 
 ```CMake
@@ -25,8 +25,18 @@ set(sources_SRCS
     ${SRC_LIST}
 )
 ```
+3. 如果没有定义芯片规格，可以在``CMSIS/stm32f10x.h``中65~72行选择自己的芯片规格取消注释即可。或者在项目CMakeList.txt中定义
 
-CMakeLists.txt参考
+```CMake
+# STM32F103C8T6为例
+add_definitions(
+    -DUSE_STDPERIPH_DRIVER
+    -DSTM32F10X_MD
+    -DHSE_VALUE=8000000
+)
+```
+
+项目CMakeLists.txt参考
 
 ```CMake
 # -----------------------------------------------------------------------------
